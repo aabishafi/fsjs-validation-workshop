@@ -24,7 +24,7 @@ const nameValidator = () => {
 
     // 1. Create a variable to store the `.value` of the `name` input and log it out
     const name = name.value;
-    console.log(name);
+    //console.log(name);
     // 2. Call this `nameValidator` function in the submit listener below
     // To test it, type something in the name field on the form and click the submit button
 
@@ -53,12 +53,12 @@ const emailValidator = () => {
     // 5. Log out the two variables above
     let index = email.indexOf('@');
     let indexDot = email.lastIndexOf('.')
-    console.log(index);
-    console.log(indexDot);
-    // 5. Create an if/else statement
-    // If the `@` index is greater than one AND the `.` last index is greater than the `@` index + 1, 
-    // Set the email's border to white and return true
-    // Else, set the email's border to red and return false
+        //console.log(index);
+        //console.log(indexDot);
+        // 5. Create an if/else statement
+        // If the `@` index is greater than one AND the `.` last index is greater than the `@` index + 1, 
+        // Set the email's border to white and return true
+        // Else, set the email's border to red and return false
     if (index > 1 && indexDot > index + 1) {
         email.style.border = 'red';
         return false;
@@ -98,8 +98,8 @@ const languageValidator = () => {
     // 1. Log out the `languagesContainer` and `languagesInputs` variables from above
     // 2. Call this `languageValidator` function in the submit listener below 
     // And then click the submit button to test it
-    console.log(languagesContainer);
-    console.log(languagesInputs);
+    //console.log(languagesContainer);
+    //console.log(languagesInputs);
     // 3. Loop over the languagesInputs
     // Create an if statement
     // If `(languagesInputs[i].checked)`, set the languagesContainer section's border to white and return true
@@ -132,29 +132,29 @@ form.addEventListener('submit', (e) => {
     // And log out a message saying this validator prevented submission
     if (!nameValidator) {
         e.preventDefault();
-        console.log('this validator prevented submission');
+        //console.log('this validator prevented submission');
         nameValidator();
     }
     // 2. Repeat the above step for the rest of your validation functions
     if (!emailValidator()) {
         e.preventDefault();
-        console.log('this validator prevented submission');
+        //console.log('this validator prevented submission');
         emailValidator();
     }
     if (!frameworkValidator) {
         e.preventDefault();
-        console.log('this validator prevented submission');
+        //console.log('this validator prevented submission');
         frameworkValidator();
     }
     if (!languageValidator) {
         e.preventDefault();
-        console.log('this validator prevented submission');
+        //console.log('this validator prevented submission');
         emailValidator();
     }
     // And feel free to comment out or delete any log statements from the validation functions above
 
 
     // Submit handler test log - Feel free to delete this or comment it out
-    console.log('Submit handler is functional!');
+    //console.log('Submit handler is functional!');
 
 });
